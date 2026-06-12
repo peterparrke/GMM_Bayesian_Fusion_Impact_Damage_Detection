@@ -21,7 +21,6 @@ Packaged date: 2026-06-12
 |---|---|
 | `article_gmm_bayes_pipeline.py` | Main executable pipeline. |
 | `requirements.txt` | Python package dependencies. |
-| `CITATION.cff` | Citation metadata for GitHub. |
 | `LICENSE` | MIT License. |
 
 ## Installation
@@ -47,18 +46,9 @@ named:
   pdd-4/
 ```
 
-Each folder should contain TXT signal files for a 17 x 17 measurement grid. For
-the released experiment layout, the selected channel suffixes are:
-
-| Suffix | Sensor |
-|---|---|
-| `#7` | Force hammer |
-| `#8` | Acceleration |
-| `#9` | High-frequency microphone |
-| `#10` | Low-frequency microphone |
-
-The script uses this mapping by default. Files from other suffixes, such as
-`#11`, are not used unless explicitly selected.
+Each folder should contain TXT signal files for a 17 x 17 measurement grid. The
+selected channel suffixes and modality order can be provided through the command
+line, as shown below.
 
 ```powershell
 python .\article_gmm_bayes_pipeline.py `
